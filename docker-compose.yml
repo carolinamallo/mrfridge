@@ -4,7 +4,8 @@ services:
     image: postgres:latest
     ports:
       - 5555:5432
+    restart: always
     environment:
-      - POSTGRES_DATABASE=PRO_mrfridge_database
+      - POSTGRES_DB=PRO_mrfridge_database
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
