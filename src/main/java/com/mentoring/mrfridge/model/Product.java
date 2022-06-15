@@ -1,28 +1,18 @@
 package com.mentoring.mrfridge.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
-//@Entity
-//@Table(name="products")
+@Entity
+@Table(name="product")
 public class Product {
-    //@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonProperty("qty")
     private int quantity;
     private String name;
-    private List<PackagingDetails> packagingDetails;
-
-    public List<PackagingDetails> getPackagingDetails() {
-        return packagingDetails;
-    }
-
-    public void setPackagingDetails(List<PackagingDetails> packagingDetails) {
-        this.packagingDetails = packagingDetails;
-    }
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate expiryDate;
