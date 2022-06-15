@@ -1,3 +1,0 @@
--- INSERT INTO product (quantity, name, expiry_date)
--- VALUES
--- ('5', 'Banana', '2022-05-07 00:00:00');

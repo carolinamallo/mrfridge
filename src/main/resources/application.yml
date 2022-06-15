@@ -3,8 +3,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        show_sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5555/PRO_mrfridge_database
+    url: jdbc:postgresql://localhost:5555/postgres
     username: postgres
     password: postgres
